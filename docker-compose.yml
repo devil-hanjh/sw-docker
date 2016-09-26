@@ -1,0 +1,15 @@
+version: '2.0'
+
+services:
+
+  swcollector:
+    container_name: swcollector
+    restart: always
+    build: ./sw
+    image: app_swcollector
+    ports:
+      - "2003:2003"
+    volumes:
+      - /data/cfg.json:/usr/local/swcollector/cfg.json
+    network_mode: "bridge"
+  

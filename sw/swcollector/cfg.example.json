@@ -1,0 +1,52 @@
+{
+    "debug": true,
+    "ip": "",
+    "hostname": "",
+    "switch": {
+        "enabled": true,
+        "ipRange": [
+		"10.199.0.3",
+	"58.215.139.136",
+	"10.192.0.2"
+        ],
+        "hostnames": {
+        },
+        "pingTimeout": 300,
+        "pingRetry": 4,
+        "community": "1qazwsxdcv",
+        "snmpTimeout": 60000,
+        "snmpRetry": 1,
+        "ignoreIface": [
+            "Nu",
+            "NU",
+            "Vlan",
+            "Vl"
+        ],
+        "ignorePkt": true,
+        "ignoreOperStatus": true,
+        "ignoreBroadcastPkt": true,
+        "ignoreMulticastPkt": true,
+        "displayByBit": true,
+        "limitConcur": 1000,
+        "fastPingMode": false
+    },
+    "heartbeat": {
+        "enabled": false,
+        "addr": "127.0.0.1:6030",
+        "interval": 60,
+        "timeout": 1000
+    },
+    "transfer": {
+        "enabled": true,
+        "addrs": [
+            "127.0.0.1:8433",
+            "127.0.0.1:8433"
+        ],
+        "interval": 30,
+        "timeout": 1000
+    },
+    "http": {
+        "enabled": true,
+        "listen": ":2000"
+    }
+}
