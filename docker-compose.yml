@@ -10,6 +10,17 @@ services:
     ports:
       - "2003:2003"
     volumes:
-      - /data/cfg.json:/usr/local/swcollector/cfg.json
+      - /data/2003/cfg.json:/usr/local/swcollector/cfg.json
     network_mode: "bridge"
   
+  swcollector-old:
+    container_name: swcollector-old
+    restart: always
+    build: ./sw
+    image: app_swcollector
+    ports:
+      - "2002:2002"
+    volumes:
+      - /data/2002/cfg.json:/usr/local/swcollector/cfg.json
+    network_mode: "bridge"
+
