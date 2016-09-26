@@ -16,8 +16,8 @@ services:
   swcollector-old:
     container_name: swcollector-old
     restart: always
-    build: ./sw
-    image: app_swcollector
+    build: ./sw-old
+    image: app_swcollector-old
     ports:
       - "2002:2002"
     volumes:
