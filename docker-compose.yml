@@ -24,3 +24,13 @@ services:
       - /data/2002/cfg.json:/usr/local/swcollector/cfg.json
     network_mode: "bridge"
 
+  hkswcollector:
+    container_name: hkswcollector
+    restart: always
+    build: ./hksw
+    image: app_hkswcollector
+    ports:
+      - "2004:2004"
+    volumes:
+      - /data/2004/cfg.json:/usr/local/swcollector/cfg.json
+    network_mode: "bridge"
