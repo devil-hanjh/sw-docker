@@ -13,11 +13,11 @@ services:
       - /data/2003/cfg.json:/usr/local/swcollector/cfg.json
     network_mode: "bridge"
   
-  swcollector-old:
-    container_name: swcollector-old
+  swcollector-noc:
+    container_name: swcollector-noc
     restart: always
-    build: ./sw-old
-    image: app_swcollector-old
+    build: ./sw-noc
+    image: app_swcollector-noc
     ports:
       - "2002:2002"
     volumes:
